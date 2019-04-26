@@ -8,6 +8,11 @@
 ### Create a migration
 `npx sequelize migration:create --name=create-users`
 
+### Migrate (after setting up the migration)
+`npx sequelize migrate`
+
+---
+
 ## Docker setup
 
 ### Postgres image
@@ -18,3 +23,5 @@
 
 ### Stop
 `docker stop gobarberdb`
+
+---
