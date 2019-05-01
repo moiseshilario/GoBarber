@@ -5,8 +5,11 @@
 ### Init sequelize
 `npx sequelize init`
 
-### Create a migration
+### Create User migration
 `npx sequelize migration:create --name=create-users`
+
+### Create Appointment migration
+`npx sequelize migration:create --name=create-appointments`
 
 ### Migrate (after setting up the migration)
 `npx sequelize migrate`
