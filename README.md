@@ -1,5 +1,9 @@
 # GoBarber
 
+A barber scheduling nodejs app using postgres and nunjucks.
+
+---
+
 ## Sequelize setup
 
 ### Init sequelize
