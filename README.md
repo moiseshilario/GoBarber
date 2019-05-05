@@ -1,5 +1,35 @@
 # GoBarber
 
+A barber scheduling nodejs app using postgres and nunjucks.
+
+### Setup Requirements
+
+- Install Docker
+
+- Install the postgres image: `kartoza/postgis`
+
+```
+docker run --name [name of your container] -p 5432:5432 -d -t kartoza/postgis
+```
+
+- Run the docker container
+```bash
+docker start [name of your container]
+```
+
+- Run the project:
+```bash
+yarn start
+``` 
+or 
+```bash
+npm run start
+```
+
+---
+
+# Project development steps
+
 ## Sequelize setup
 
 ### Init sequelize
@@ -14,7 +44,6 @@
 ### Migrate (after setting up the migration)
 `npx sequelize migrate`
 
----
 
 ## Docker setup
 
@@ -26,5 +55,3 @@
 
 ### Stop
 `docker stop gobarberdb`
-
----
