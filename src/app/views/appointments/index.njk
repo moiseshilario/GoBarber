@@ -1,0 +1,34 @@
+{% extends '_layouts/default.njk' %}
+
+{% block body %}
+  <div class="content">
+    <strong>Todos os seus horários:</strong>
+
+    {# {% for ap in barberAppointments %}
+      <p>{{ ap.date }} - {{ ap.user }}</p>
+    {% endfor %} #}
+
+    <input type="text" class="flatpickr" placeholder="Escolha uma data">
+
+    <div id="hours"></div>
+
+    <a href="/app/dashboard">Voltar</a>
+
+
+    <script type="text/javascript">
+      flatpickr('.flatpickr', {
+        minDate: new Date(),
+        dateFormat: 'd/m/Y',
+        onChange: function (date) {
+          fetch(`/app/appointments/{{ user.id }}?date=${date[0].getTime()}`)
+            .then(function (response) {
+              console.log('XABLAU FETCH')
+              response.text().then(function(html) {
+                document.getElementById('hours').innerHTML = html
+              })
+            })
+        }
+      })
+    </script>
+  </div>
+{% endblock %}

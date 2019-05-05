@@ -1,0 +1,7 @@
+{% for hour in available %}
+  <label for="time-{{hour.value}}" class="{% if hour.available === false %}disabled{% endif %}">
+    {{ hour.time }} {% if hour.user !== '' %}
+      - {{ hour.user }}
+    {% endif %}
+  </label>
+{% endfor %}

@@ -2,6 +2,8 @@
 
 {% block body %}
   <div class="content">
+
+  {% if user.provider === false %}
     <strong>Olá, {{ user.name }}</strong>
     <p>Inicie um agendamento escolhendo um profissional abaixo:</p>
 
@@ -16,6 +18,14 @@
         </li>
       {% endfor %}
     </ul>
+  {% else %}
+    <strong>Olá, {{ user.name }}</strong>
+    <p>Aqui estão listados todos os agendamentos de seus clientes:</p>
+
+    <a href="/app/appointments/" class="appointment-button">Ver minha agenda</a>
+  {% endif %}
+
+
   <a href="/app/logout" class="logout" >Sair</a>
   </div>
 {% endblock %}

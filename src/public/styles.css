@@ -290,3 +290,23 @@ ul.providers {
 .main-wrapper .content form button:hover {
   background: #634dac;
 }
+
+.appointment-button {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+  background: #7159c1;
+  margin-top: 5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.appointment-button:hover {
+  background: #634dac;
+}
